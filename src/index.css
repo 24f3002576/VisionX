@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0F1115;
+    --bg-surface: #1A1D23;
+    --bg-surface-alt: #16191E;
+    --bg-card: #1F232B;
+    --bg-dark: #0D0F13;
+    --border-color: #2A2D35;
+    --border-light: #3A3F4B;
+    --accent-blue: #005FB8;
+    --accent-blue-hover: #0072DD;
+    --status-green: #4CAF50;
+    --status-green-bg: #152518;
+    --status-green-border: #234529;
+    --text-primary: #E0E0E0;
+    --text-secondary: #8E9299;
+    --text-muted: #5C616B;
+  }
+
+  html.light {
+    --bg-main: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-surface-alt: #F1F5F9;
+    --bg-card: #FFFFFF;
+    --bg-dark: #E2E8F0;
+    --border-color: #CBD5E1;
+    --border-light: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark body {
+    background-color: #0F1115;
+    color: #E0E0E0;
+  }
+
+  html.light body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0D0F13;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2A2D35;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3A3F4B;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+

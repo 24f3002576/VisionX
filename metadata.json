@@ -1,0 +1,6 @@
+{
+  "name": "Sovereign Industrial AI Workbench (MRPL PS-26117)",
+  "description": "Air-gapped on-premise agentic AI workbench using open-weight multimodal LLMs for confidential industrial and PSU operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
